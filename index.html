@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Tarefas - Alloga Time</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="phone">
+    <!-- Cabeçalho com Home -->
+    <div class="top-bar">
+      <div class="header-row">
+        <a href="index.html" class="home-button" title="Página Inicial">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+        </a>
+        <div class="app-title">Alloga Time</div>
+      </div>
+      <div class="app-date" id="app-date"></div>
+    </div>
+
+    <!-- Conteúdo -->
+    <div class="content-area">
+      <div class="inner">
+        <!-- Título Tarefas -->
+        <div class="section-title">Tarefas</div>
+
+        <!-- Formulário Tarefa -->
+        <form id="tarefa-form" class="form-container">
+          <!-- Data -->
+          <div class="form-group">
+            <label class="form-label">Data</label>
+            <input type="date" id="tarefa-data" class="form-input" required>
+          </div>
+
+          <!-- Tipo -->
+          <div class="form-group">
+            <label class="form-label">Tipo</label>
+            <select id="tarefa-tipo" class="form-select" required>
+              <option value="">Selecione o tipo</option>
+              <option value="Picking">Picking</option>
+              <option value="Aprovisionamento">Aprovisionamento</option>
+              <option value="Lanche">Lanche</option>
+              <option value="Formação">Formação</option>
+            </select>
+          </div>
+
+          <!-- Local -->
+          <div class="form-group">
+            <label class="form-label">Local</label>
+            <select id="tarefa-local" class="form-select" required>
+              <option value="">Selecione o local</option>
+              <option value="LR 35">LR 35</option>
+              <option value="Kardex 4">Kardex 4</option>
+              <option value="Kardex 14">Kardex 14</option>
+              <option value="Kardex 17">Kardex 17</option>
+              <option value="Kardex 20">Kardex 20</option>
+            </select>
+          </div>
+
+          <!-- Hora Início -->
+          <div class="form-group">
+            <label class="form-label">Hora Início</label>
+            <input type="time" id="tarefa-hora" class="form-input" required>
+          </div>
+
+          <!-- Botão Enviar -->
+          <button type="submit" class="submit-button">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
